@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    
+}
+
+
+
+.container{
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    color: transparent;
+}
+.title{
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 10px;
+}
+.links{
+  margin-top: 5px;
+    font-size: 8px;
+    display: flex;
+}
+.links1{
+    margin: 8px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+}
+.button{
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    border: solid 1px rgb(211, 169, 154);
+    padding: 7px;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+.button:hover {
+    background-color: white;
+    border: solid #e97200 1px;
+    font-weight: bold;
+    color: #e97200;
+  }
+
+.main-image{
+    width: 100%;
+    height: auto;
+    margin-top: -50px;
+}
+.p-main {
+    color: white;
+    position: absolute;
+    top: 260px;
+    left: 55px;
+    font-size: 18px;
+  }
+
+  .p-header1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: oran;
+  }
+
+  .p-maintext {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+
+  }
+
+  table {
+    border: solid 1px #dad9d4;
+    width: 90%;
+     margin: 0 auto;
+     margin-top: 10%;
+   }
+
+  th {
+    border: solid 1px #dad9d4;
+    font-weight: 100;
+    text-align: start;
+    font-size: 8px;
+    padding: 10px;
+    
+   
+  }
+
+  .orange {
+    color: #e97200;
+   
+    font-size: 10px;
+    font-weight: 700;
+  }
+  
+
+
+
+  .all {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+  }
+  
+  .right {
+    width: 40%;
+  }
+  .lion-female {
+    width: 100%;
+   
+  }
+  .left {
+    width: 50%;
+
+  }
+
+  .p-main1 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .p-main2 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+  .p-main3 {
+    border-top: 1px solid #e97200;
+    font-weight: 100;
+    font-size: 12px;
+  }
