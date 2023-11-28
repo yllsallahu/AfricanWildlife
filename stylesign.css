@@ -1,0 +1,111 @@
+*
+{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #ebecee;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    
+    color: transparent;
+}
+.title{
+    color: #e97200;
+    font-size: 19px;
+    font-weight: bold;
+    margin: 10px;
+}
+.links{
+  margin-top: 5px;
+    font-size: 8px;
+    display: flex;
+}
+.links1{
+    margin: 8px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.button{
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    border: solid #e97200 1px;
+    padding: 7px;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+.button:hover {
+    background-color: white;
+    border: solid #e97200 1px;
+    font-weight: bold;
+    color: #e97200;
+  }
+
+  main{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contetmain{
+    width: 58%;
+    border: solid #e97200 1px;
+    background-color: #e97200;
+    margin-top: -70px;
+    height: 443px;
+    
+
+  }
+.titleprara{
+    color: white;
+    font-size: 100px;
+    margin-left: 50px;
+    margin-top: 120px;
+
+
+}
+.conteti{
+    color: white;
+    margin-left: 70px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.autori{
+    
+    font-size: 13px;
+    font-style: italic;
+}
+
+label{
+    font-size: 8px;
+    margin: 10px;
+    
+    
+}
+input{
+    border: solid 1px #e97200;
+    background: #f1f1f1;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 2px;
+    
+}
+.signuup{
+    margin: 0 auto;
+    
+}
