@@ -18,6 +18,7 @@ header{
     display: flex;
     justify-content: space-between;
     position: relative;
+    margin-left: 44px;
     
     color: transparent;
 }
@@ -62,27 +63,45 @@ header{
   }
 
   .contetmain{
-    width: 58%;
-    border: solid #e97200 1px;
-    background-color: #e97200;
-    margin-top: -70px;
-    height: 443px;
+    width: 60%;
     
-
+    background-color: #e97200;
+    height: 374px;
   }
+
+.clasangjyre{
+    display: flex;
+    width: 66.7%;
+    justify-content: space-around;
+    background-color: #e97200;
+    justify-self: flex-end;
+
+    
+    
+}
 .titleprara{
     color: white;
     font-size: 100px;
-    margin-left: 50px;
-    margin-top: 120px;
+ 
 
 
 }
 .conteti{
     color: white;
-    margin-left: 70px;
     font-size: 20px;
     font-weight: bold;
+    width: 80%;
+    margin: 0 auto;
+    margin-right: 10px;
+}
+.conteti1{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    width: 80%;
+    margin: 0 auto;
+    
 }
 .autori{
     
