@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesign.css">
-    <script src="https://kit.fontawesome.com/ed661bfa96.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/css/stylesign.css">
+        <script src="https://kit.fontawesome.com/ed661bfa96.js" crossorigin="anonymous"></script>
+        <script src="signup.js"></script>
+    </head>
 <body>
+
+
+
+
     <header>
       
         <p class="title">African Wildlife</p>
@@ -19,45 +25,41 @@
                 <a class="links1" href=""> NEWS</a>
                 <a class="links1" href=""> CONTACT US</a>
             </div>
-            <a class="button" href="/index.html"><i class="fa-solid fa-house"></i></a>
+            <a class="button5" href="/index.html"><i class="fa-solid fa-house"></i></a>
         </div>
 
     </header>
-
     <main>
-        <div class="signup">
-            <h2 style="margin-bottom: 20px;">Registration Form</h2>
-    <form action="#">
-      <div class="input-box">
-        <p class="psign">Name :</p>
-        <input type="text" placeholder="Enter your name" required>
         
-      </div>
-      <div class="input-box">
-        <p class="psign">Surname:</p>
-        <input type="text" placeholder="Enter your email" required>
-      </div>
-      <div class="input-box">
-        <p class="psign">Password:</p>
-        <input type="password" placeholder="Create password" required>
-      </div>
-      <div class="input-box">
-        <p class="psign">Re-Password:</p>
-        <input type="password" placeholder="Confirm password" required>
-      </div>
-      <div class="policy">
-        <input style="margin-left: 20px;" type="checkbox">
-        <p class="accept">I accept all terms & condition</p>
-      </div>
-      <div class="input-box button">
-        <input type="Submit" value="Register Now">
-      </div>
-      <div class="text">
-        <h3>Already have an account? <a href="#">Login now</a></h3>
-      </div>
-    </form>
-        </div>
+       
+        <div class="signup">
+            
 
+            <form id="myForm">
+                <br><br><br>
+                <label for="">Name :</label><br>
+                <input type="text" id="name" required>
+                <div class="error-message" id="nameError"></div>
+<br>
+                <label for="">Surname :</label><br>
+                <input type="text" id="surname" required>
+                <div class="error-message" id="surnameError"></div>
+<br>
+                <label for="">Email :</label><br>
+                <input type="text" id="email" required>
+                <div class="error-message" id="emailError"></div>
+<br>
+                <label for="">Password :</label><br>
+                <input type="password" id="password" required>
+                <div class="error-message" id="passwordError"></div>
+<br>                
+                <button id="idsu" type="button" onclick="validateFunction()">Submit</button>
+            </form>
+        </div>
+ 
+
+
+  
 
 
         <div class="contetmain">
@@ -71,4 +73,66 @@
 
 
     </main>
+<script>
+         let nameRegex = /^[A-Z][a-z]{2,8}$/;
+         let surnameRegex = /^[A-Z][a-z]{3,10}$/;
+         let emailRegex = /[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
+         let passwordRegex = /^[A-Z][a-z]{4,8}$/;
+    
+
+    function validateFunction(){
+
+        let nameInput = document.getElementById('name');
+        let nameError = document.getElementById('nameError');
+
+        let emailInput = document.getElementById('email');
+        let emailError = document.getElementById('emailError');
+ 
+        let surnameInput = document.getElementById('surname');
+        let surnameError = document.getElementById('surnameError');
+
+        let passwordInput = document.getElementById('password');
+        let passwordError = document.getElementById('passwordError');
+
+
+        nameError.innerText= '';
+        surnameError.innerText='';
+        emailError.innerText='';
+        passwordError.innerText='';
+       
+
+
+        if(!(nameRegex.test(nameInput.value))){
+            nameError.innerText='Invalid Name';
+    
+            return;
+        }
+
+        if(!(surnameRegex.test(surnameInput.value))){
+            surnameError.innerText='Invalid Surname';
+         
+            return;
+        }
+
+        if(!(emailRegex.test(emailInput.value))){
+            emailError.innerText='Invalid Email';
+            
+             return;
+        }
+        if(!(passwordRegex.test(passwordInput.value))){
+            passwordError.innerText='Invalid Password';
+            return;
+        }
+
+      
+        alert('Success')
+    
+
+    }
+
+
+
+</script>
+    
+ </body>
 </html>

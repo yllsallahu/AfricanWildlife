@@ -66,7 +66,7 @@ header{
   main{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 20px;
       
     
@@ -79,7 +79,7 @@ header{
   }
 
   .contetmain{
-    width: 50%;
+    width: 55%;
     background-color: white;
     
   }
@@ -105,36 +105,67 @@ header{
     font-style: italic;
 
 }
+.button5{
+  color: #e97200;
+  font-size: 28px;
+  margin: 20px;
+}
 
-form .input-box input{
-    width: 100%;
-    margin: 10px;
-   padding: 10px;
-    font-size: 17px;
-    font-weight: 400;
-    color: #333;
-    border: 1.5px solid #C7BEBE;
-    border-radius: 6px;
-    transition: all 0.3s ease;
+  .button1{
+   background-color: white;
+   padding: 12px;
+   width: 50%;
+   font-size: 20px;
+   font-weight: 600;
+   color: white;
+   background-color: #e97200;
+   border-radius: 10px;
+   border: #e97200 1px solid;
+    }
+    label{
+      font-size: 14px;
+      color: grey;
+      
     
-  }
-  .input-box.button input{
-    color: #fff;
-    letter-spacing: 1px;
+    }
+    input{
+    padding: 10px;
+    border-radius: 12px;
+    width: 60%;
+    border: 1px solid grey;
+    margin-top: 8px;
+    transition: 0.3s;
+    
+    
    
-    background: #e97200;
-    cursor: pointer;
-  }
-  h3{
-    color: black;
-  }
-  .accept{
-    display: inline;
-  }
-  .psign{
-    color: #333;
-    margin-left: 10px;
-  }
+    }
+    #idsu{
+      width: 60%;
+      padding: 12px;
+      margin: 10px;
+      font-size: 15px;
+      background-color: #e97200;
+      color: white;
+      font-weight: 700;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .signup{
+      width: 40%;
+     margin: 0 auto;
+      
+    }
+    form{
+    margin-left: 50px;
+    }
+    .error-message{
+      font-size: 16px;
+      color: red;
+    }
+    
+
+ 
  
  
  

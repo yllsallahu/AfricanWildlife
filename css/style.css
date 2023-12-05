@@ -16,7 +16,7 @@ header{
     display: flex;
     justify-content: space-between;
     position: relative;
-    
+    margin-top: 10px;
     color: transparent;
 }
 .title{
@@ -55,7 +55,7 @@ header{
 .main-image{
     width: 100%;
     height: auto;
-    margin-top: -50px;
+    margin-top: -60px;
 }
 .p-main {
     color: white;
