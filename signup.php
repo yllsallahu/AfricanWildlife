@@ -5,37 +5,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="/css/stylesign.css">
+        <link rel="stylesheet" href="css/stylesign.css">
         <script src="https://kit.fontawesome.com/ed661bfa96.js" crossorigin="anonymous"></script>
         <script src="signup.js"></script>
     </head>
 <body>
-
-
-
-
-    <header>
-      
-        <p class="title">African Wildlife</p>
-
-        <div class="other">
-            <div class="links">
-                <a class="links1" href=""> WHAT WE DO</a>
-                <a class="links1" href=""> ABOUT US</a>
-                <a class="links1" href=""> NEWS</a>
-                <a class="links1" href=""> CONTACT US</a>
-            </div>
-            <a class="button5" href="/index.html"><i class="fa-solid fa-house"></i></a>
-        </div>
-
-    </header>
+<?php include 'headersignup.php';?>
     <main>
-        
-       
         <div class="signup">
-            
-
-            <form id="myForm">
+              <form id="myForm">
                 <br><br><br>
                 <label for="">Name :</label><br>
                 <input type="text" id="name" required>
@@ -134,3 +112,4 @@
     
  </body>
 </html>
+
