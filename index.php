@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/ed661bfa96.js" crossorigin="anonymous"></script>
 </head>
+
+
 <body>
             <div class="container"> 
             <?php include 'header.php';?>
+
+   
             </div>
             <main>
                 <img class="main-image" src="image/leo.jpg" alt=""> 
