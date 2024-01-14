@@ -2,7 +2,7 @@
     margin: 0;;
 }
 body{
- background-color: #EDECE9;
+ background-color: #505050;
 }
 
 .container{
@@ -10,45 +10,6 @@ body{
     max-width: 1200px;
     margin: 0 auto; 
 }
-header{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    margin-top: 10px;
-    color: transparent;
-}
-.title{
-    color: #e97200;
-    font-size: 30px;
-    font-weight: bold;
-   
-}
-.links{
-  margin-top: 5px;
-    display: flex;
-}
-.links1{
-    margin: 8px;
-    text-decoration: none;
-    color: #e97200;
-}
-.button{
-   
-    text-decoration: none;
-    color: black;
-    border: solid #e97200 1px;
-    padding: 10px;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 10px;
-}
-.button:hover {
-    background-color: white;
-    border: solid #e97200 1px;
-    font-weight: bold;
-    color: #e97200;
-  }
 
   .title1{
     font-size: 30px;
@@ -65,7 +26,8 @@ header{
   .header{
     font-size: 30px;
     font-weight: 500;
-    font-family:sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
     
   }
   .smallanimal{

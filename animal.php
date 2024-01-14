@@ -4,25 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/animal.css">
+    <link rel="stylesheet" href="../AfricanWildlife/css/animal.css">
 </head>
 <body>
-    <header> 
-                
-        <p class="title"> African Wildlife</p>
-
-     <div class="links">
-        <a class="links1" href=""> WHAT WE DO</a>
-        <a class="links1" href=""> ABOUT US</a>
-        <a class="links1" href=""> NEWS</a>
-        <a class="links1" href=""> CONTACT US</a>
-     </div>
-
-        <a class="button" href="/signup.html">SIGN UP</a>
-
-
-        </header> 
-
+    
         <main>
             <div class="left">
                 <h2 id="text6">Rabbit</h2>

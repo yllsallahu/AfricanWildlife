@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="../AfricanWildlife/css/product.css">
 </head>
 <body>
     <!DOCTYPE html>
@@ -17,21 +17,8 @@
     <body>
         <div class="container">
         
-        <header> 
-                
-            <p class="title"> African Wildlife</p>
-
-         <div class="links">
-            <a class="links1" href=""> WHAT WE DO</a>
-            <a class="links1" href=""> ABOUT US</a>
-            <a class="links1" href=""> NEWS</a>
-            <a class="links1" href=""> CONTACT US</a>
-         </div>
-
-            <a class="button" href="/signup.html">SIGN UP</a>
-
-
-            </header> 
+        <?php include 'header.php';?>
+        
             <br><br><br>
 
             <main>
@@ -44,15 +31,15 @@
                 <br><br>
                 <div id="small">
                     
-                    <a href="animal.html" class="image-container" id="rabbit">
+                    <a href="animal.php" class="image-container" id="rabbit">
                         <img class="imagesonsign" style="width: 100%;" src="https://images.pexels.com/photos/4001296/pexels-photo-4001296.jpeg?cs=srgb&dl=pexels-satyabratasm-4001296.jpg&fm=jpg" alt="">
                         <div class="image-text">Rabbit</div>
                     </a>
-                    <a href="animal.html" class="image-container" id="rabbit">
+                    <a href="animal.php" class="image-container" id="rabbit">
                         <img class="imagesonsign" style="width: 100%;" src="https://images.pexels.com/photos/4001296/pexels-photo-4001296.jpeg?cs=srgb&dl=pexels-satyabratasm-4001296.jpg&fm=jpg" alt="">
                         <div class="image-text">Rabbit</div>
                     </a>
-                    <a href="animal.html" class="image-container" id="rabbit">
+                    <a href="animal.php" class="image-container" id="rabbit">
                         <img class="imagesonsign" style="width: 100%;" src="https://images.pexels.com/photos/4001296/pexels-photo-4001296.jpeg?cs=srgb&dl=pexels-satyabratasm-4001296.jpg&fm=jpg" alt="">
                         <div class="image-text">Rabbit</div>
                     </a>
@@ -67,12 +54,12 @@
                 <br><br><br>
                 <div id="small">
                     
-                    <a href="" class="image-container" id="rabbit">
+                    <a href="animal.php" class="image-container" id="rabbit">
                         <img class="imagesonsign" style="width: 100%;" src="https://www.biographic.com/wp-content/uploads/2019/10/14-18-6_1466416.jpg" alt="">
                         <div class="image-text">Ethopain Wolf</div>
                     </a>
                      
-                    <a href="" class="image-container" id="rabbit">
+                    <a href="animal.php" class="image-container" id="rabbit">
                         <img class="imagesonsign" style="width: 100%;" src="https://www.biographic.com/wp-content/uploads/2019/10/14-18-6_1466416.jpg" alt="">
                         <div class="image-text">Ethopain Wolf</div>
                     </a>

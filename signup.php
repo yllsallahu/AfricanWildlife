@@ -32,14 +32,10 @@
                 <div class="error-message" id="passwordError"></div>
 <br>                
                 <button id="idsu" type="button" onclick="validateFunction()">Submit</button>
-                <p style="margin-left: 30px;">Already have an account <a href="/login/log.html">Log in</a></p>
+                <p style="margin-left: 30px;">Already have an account <a href="../AfricanWildlife/login.php">Log in</a></p>
             </form>
         </div>
  
-
-
-  
-
 
         <div class="contetmain">
             <br>
