@@ -85,10 +85,7 @@
                 
             </div>
 </div>
-
 <br><br><br>
-
-
  </div>
 
  <div class="main-continue">
@@ -103,9 +100,7 @@
             
             </p>
             <br>
-            
             <img style=" width: 100%;" src="image/babylion.PNG" alt="">
-            
     </div>
     <div class="mctwo">
         <br>

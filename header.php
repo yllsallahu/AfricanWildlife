@@ -3,13 +3,13 @@
                 <p class="title"> African Wildlife</p>
 
              <div class="links">
-                <a class="links1" href="product.html"> WHAT WE DO</a>
-                <a class="links1" href="/projekti s/html1.php"> ABOUT US</a>
-                <a class="links1" href="news/news project.html"> NEWS</a>
-                <a class="links1" href="../AfricanWildlife/contct us/contact us.html"> CONTACT US</a>
+                <a class="links1" href="../AfricanWildlife/Product/product.php"> WHAT WE DO</a>
+                <a class="links1" href="../AfricanWildlife/AboutUs/AboutUs.php"> ABOUT US</a>
+                <a class="links1" href="../AfricanWildlife/News/news.php"> NEWS</a>
+                <a class="links1" href="../AfricanWildlife/Contact Us/contact us.php"> CONTACT US</a>
              </div>
 
-                <a class="button" href="../AfricanWildlife/signup.php">SIGN UP</a>
+                <a class="button" href="../AfricanWildlife/Sign Up/signup.php">SIGN UP</a>
 
 
                 </header> 

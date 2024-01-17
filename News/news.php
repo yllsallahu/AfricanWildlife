@@ -17,7 +17,7 @@
 	<div class="blog-box">
 
 		<div class="blog-img">
-			<img src="\news\photo1.jpg">
+			<img src="photo1.jpg">
 		</div>
 
 		<div class="blog-text">
@@ -34,7 +34,7 @@
 	<div class="blog-box">
 
 		<div class="blog-img">
-			<img src="\news\photo2.jpg">
+			<img src="photo2.jpg">
 		</div>
 
 		<div class="blog-text">
@@ -52,7 +52,7 @@
 	<div class="blog-box">
 
 		<div class="blog-img">
-			<img src="\news\photo3.jpg">
+			<img src="photo3.jpg">
 		</div>
 
 		<div class="blog-text">
@@ -70,7 +70,7 @@
 	<div class="blog-box">
 
 		<div class="blog-img">
-			<img src="\news\photo4.jpg">
+			<img src="photo4.jpg">
 		</div>
 
 		<div class="blog-text">
@@ -88,7 +88,7 @@
 	<div class="blog-box">
 
 		<div class="blog-img">
-			<img src="\news\photo5.jpg">
+			<img src="photo5.jpg">
 		</div>
 
 		<div class="blog-text">
@@ -107,7 +107,7 @@
 	<div class="blog-box">
 
 		<div class="blog-img">
-			<img src="\news\photo6.jpg">
+			<img src="photo6.jpg">
 		</div>
 
 		<div class="blog-text">

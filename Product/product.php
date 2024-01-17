@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../AfricanWildlife/css/product.css">
+    <link rel="stylesheet" href="product.css">
 </head>
 <body>
     <!DOCTYPE html>
@@ -17,7 +17,7 @@
     <body>
         <div class="container">
         
-        <?php include 'header.php';?>
+        <?php include '/xampp/htdocs/African Wildlife/AfricanWildlife/header.php';?>
         
             <br><br><br>
 
@@ -31,7 +31,7 @@
                 <br><br>
                 <div id="small">
                     
-                    <a href="animal.php" class="image-container" id="rabbit">
+                    <a href="../Rabbit animal/animal.php" class="image-container" id="rabbit">
                         <img class="imagesonsign" style="width: 100%;" src="https://images.pexels.com/photos/4001296/pexels-photo-4001296.jpeg?cs=srgb&dl=pexels-satyabratasm-4001296.jpg&fm=jpg" alt="">
                         <div class="image-text">Rabbit</div>
                     </a>

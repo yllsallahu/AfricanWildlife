@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="css/stylesign.css">
+        <link rel="stylesheet" href="stylesign.css">
         <script src="https://kit.fontawesome.com/ed661bfa96.js" crossorigin="anonymous"></script>
         <script src="signup.js"></script>
     </head>

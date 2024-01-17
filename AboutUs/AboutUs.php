@@ -19,7 +19,7 @@
 <div class="container">
 	<section class="about">
 		<div class="about-image">	
-		<img src="\projekti s\lion1.jpg"> 
+		<img src="lion1.jpg"> 
 	</div>
 		<div class="about-content">
 		<h2>About Lion- Our Strategy to Save Lions</h2>	
