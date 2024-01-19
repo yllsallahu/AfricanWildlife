@@ -1,0 +1,180 @@
+*
+{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0.5, 0.5, 0.5, 0.5);
+    max-width: 1300px;
+    margin: 0 auto; 
+    height: 97vh;
+    
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    
+   
+}
+.title{
+    width: 50%;
+    color: #e97200;
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin: 20px;
+    
+    
+}
+
+.links{
+      font-size: 14px;
+      margin-top: 30px;
+      
+  }
+
+  .links1{
+    padding: 10px;
+    text-decoration: none;
+    color: #e97200;
+    font-weight: 400; 
+}
+
+
+.other{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.button{
+    margin: 15px;
+    padding: 10px;
+    
+    color:  #e97200 ;
+    font-size: 26px;
+    
+    
+}
+
+  main{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+      
+    
+    
+  }
+  
+  .centerre{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contetmain{
+    width: 55%;
+    background-color: white;
+    
+  }
+  .conteti{
+   
+   color: #e97200;
+    font-size: 31px;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-left: 20px;
+   
+}
+.conteti1{
+    color: #e97200;
+    font-size: 100px;
+    font-weight: bold;
+
+}
+
+.autori{
+    
+    font-size: 22px;
+    font-style: italic;
+
+}
+.button5{
+  color: #e97200;
+  font-size: 28px;
+  margin: 20px;
+}
+
+  .button1{
+   background-color: white;
+   padding: 12px;
+   width: 50%;
+   font-size: 20px;
+   font-weight: 600;
+   color: white;
+   background-color: #e97200;
+   border-radius: 10px;
+   border: #e97200 1px solid;
+    }
+    label{
+      font-size: 14px;
+      color: grey;
+      
+    
+    }
+    input{
+    padding: 10px;
+    border-radius: 12px;
+    width: 60%;
+    border: 1px solid grey;
+    margin-top: 8px;
+    transition: 0.3s;
+    
+    
+   
+    }
+    #idsu{
+      width: 60%;
+      padding: 12px;
+      margin: 10px;
+      font-size: 15px;
+      background-color: #e97200;
+      color: white;
+      font-weight: 700;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .signup{
+      width: 40%;
+     margin: 0 auto;
+      
+    }
+    form{
+    margin-left: 50px;
+    }
+    .error-message{
+      font-size: 16px;
+      color: red;
+    }
+    .pheader{
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: #e97200;
+    }
+    
+
+ 
+ 
+ 
+ 
+
+
+ 
