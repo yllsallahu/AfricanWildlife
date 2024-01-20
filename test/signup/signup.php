@@ -12,7 +12,7 @@
     <br>
 <main>
         <div class="signup">
-              <form id="myForm" action="signupvali.php" method="POST">
+              <form id="myForm" action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
                 <br><br><br>
                 <label for="">Name :</label><br>
                 <input type="text" name="name" id="name">
@@ -31,7 +31,7 @@
                 <div class="error-message" id="passwordError"></div>
 <br>                
                 <button id="idsu" name="submit" type="button" onclick="validateFunction()">Submit</button>
-                <p style="margin-left: 30px;">Already have an account <a href="">Log in</a></p>
+                <p style="margin-left: 30px;">Already have an account <a href="../Login/login.php">Log in</a></p>
             </form>
         </div>
         <div class="contetmain">
