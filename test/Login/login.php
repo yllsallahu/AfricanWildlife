@@ -1,5 +1,51 @@
-<?php include('users.php'); ?>
-<?php include('validation.php'); ?>
+<?php
+include('users.php');
+include('validation.php');
+include('login_connection.php');
+
+if (isset($_POST['submit'])) {
+    $Email = $_POST['email'];
+    $Password = $_POST['psw'];
+
+    $sql = "SELECT * FROM users WHERE Email ='$Email'";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result) {
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+        if ($row) {
+            // Check if the key "password" exists in the $row array
+            if (array_key_exists("password", $row)) {
+                if (password_verify($Password, $row["password"])) {
+                    session_start();
+                    $_SESSION['user_id'] = $row['ID'];
+                    $_SESSION['user_email'] = $row['Email'];
+                    header("Location: home.php");
+                    exit; // Ensure that the script stops execution after redirection
+                } else {
+                    echo '<script>
+                    alert("Invalid password !!");
+                    </script>';
+                }
+            } else {
+                echo '<script>
+                alert("Invalid array key !!");
+                </script>';
+            }
+        } else {
+            echo '<script>
+            alert("Invalid username or password !!");
+            </script>';
+        }
+    } else {
+        echo "Error: " . mysqli_error($conn);
+    }
+
+    // Close the database connection after use
+    mysqli_close($conn);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +108,7 @@
 <body>
     <div class="login">
         <p class="lgo">Login</p>
-        <form action="" method="post">
+        <form action="login.php" method="post">
             <label for="">Email :</label>
             <input type="email" name="email"> <br>
             <label for="">Password :</label>

@@ -53,15 +53,7 @@ header{
     background-color: white;
 }
 
-.button{
-    margin: 15px;
-    padding: 10px;
-    
-    color:  #e97200 ;
-    font-size: 26px;
-    
-    
-}
+
 
   main{
     width: 100%;
@@ -105,24 +97,9 @@ header{
     font-style: italic;
 
 }
-.button5{
-  color: #e97200;
-  font-size: 28px;
-  margin: 20px;
-}
 
-  .button1{
-   background-color: white;
-   padding: 12px;
-   width: 50%;
-   font-size: 20px;
-   font-weight: 600;
-   color: white;
-   background-color: #e97200;
-   border-radius: 10px;
-   border: #e97200 1px solid;
 
-  }
+
     label{
       font-size: 14px;
       color: grey;
@@ -140,18 +117,7 @@ header{
     
    
     }
-    #idsu{
-      width: 60%;
-      padding: 12px;
-      margin: 10px;
-      font-size: 15px;
-      background-color: #e97200;
-      color: white;
-      font-weight: 700;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-    }
+ 
     .signup{
       width: 40%;
      margin: 0 auto;
@@ -170,7 +136,15 @@ header{
         font-weight: bold;
         color: #e97200;
     }
-    
+    .sbm{
+      background-color: #e97200;
+      margin-left: 10px;
+      font-weight: bold;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
 
  
  
