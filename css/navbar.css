@@ -1,0 +1,46 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5)
+}
+.navbar-other {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3)
+}
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+}
+.logo img {
+   width: 120px;
+   height: 90px;
+}
+.navbar ul li {
+    list-style: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a::after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    background-color: rgb(184, 29, 29);
+    width: 0;
+    transition: .4s;
+    border-radius: 10px;
+    margin: auto;
+}
+.navbar ul li a:hover::after {
+    width: 80%;
+    height: 3px;
+}
