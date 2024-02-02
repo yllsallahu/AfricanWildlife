@@ -9,8 +9,7 @@ private $id;
 private $nrleternjoftimit;
 private $emri;
 private $mbiemri;
-private $aksesi; 
-private $email;
+private $aksesi;
 private $passwordi;
 private $numri;
 private $dbConn;
@@ -58,8 +57,6 @@ public function setMbiemri($mbiemri) {
     $this->mbiemri = $mbiemri;
 }
 
-
-
 public function getAdresa() {
     return $this->adresa;
 }
@@ -88,12 +85,22 @@ public function setNumri($numri){
     $this->numri=$numri;
 }
 
-
+public function fshijPerdoruesin($id) {
+    try {
+        $sql = "DELETE FROM users WHERE id = :id";
+        $stmt = $this->dbcon->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return true;
+    } catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
 
 //Metoda per insertim Dhenave
 public function insertoDhenat(){
 try{
-    $sql = "INSERT INTO `users` (`nrleternjoftimit`,`emri`,`mbiemri`,`numri`,`adresa`,`passwordi`) VALUES(?,?,?,?,?,? )";
+    $sql = "INSERT INTO `users` (`nrleternjoftimit`,`emri`,`mbiemri`,`numri`,`adresa`,`passwordi`) VALUES(?,?,?,?,?,?)";
     $stm = $this->dbcon->prepare($sql);
     $stm->execute([$this->nrleternjoftimit, $this->emri, $this->mbiemri,$this->numri, $this->adresa, $this->passwordi]);
     
@@ -104,7 +111,6 @@ try{
         }
 }
 
-    
     
     public function kontrollo(){
         try {
@@ -167,6 +173,23 @@ public function shfaqTeGjithePerdoruesit(){
             return $e->getMessage();
         }
     }
+
+public function updateUser($id, $emri, $mbiemri, $aksesi) {
+    try {
+        $sql = "UPDATE users SET emri = :emri, mbiemri = :mbiemri, aksesi = :aksesi WHERE id = :id";
+        $stmt = $this->dbcon->prepare($sql);
+        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':emri', $emri);
+        $stmt->bindParam(':mbiemri', $mbiemri);
+        $stmt->bindParam(':aksesi', $aksesi);
+        $stmt->execute();
+        return true;
+    } catch (Exception $e) {
+        return $e->getMessage();
+    }
+}
+
+
 
 
 }

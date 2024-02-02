@@ -21,7 +21,7 @@ if (!isset($_SESSION['aksesi'])) {
 <body>
     
             <nav class="navbar">
-                <p>African Wildlife</p>
+                <p style=" color: #E97200; font-size:30px; font-weight:bold">African Wildlife</p>
             <ul class="nav-links">
                 <?php
                 if ($_SESSION['aksesi'] != 0) {

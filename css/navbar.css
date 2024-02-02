@@ -44,3 +44,33 @@
     width: 80%;
     height: 3px;
 }
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center; 
+        height: auto;
+        
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .navbar ul li {
+        margin-bottom: 10px;
+    }
+
+    .navbar ul li a {
+        display: block;
+        margin: 10px 0;
+        text-align: center; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar ul li a {
+        padding: 10px 20px;
+    }
+}

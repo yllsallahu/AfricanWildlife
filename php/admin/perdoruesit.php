@@ -4,120 +4,106 @@ require_once('../CRUD/Modeli.php');
 
 $Modeli = new Modeli();
 
-if (isset($_GET['userID'])) {
-  $Modeli->setId($_GET['id']);
+// Handle Update Request
+if (isset($_GET['updateId'])) {
+    // Update operation
+    $id = $_GET['updateId'];
+    $emri = $_GET['emri'];
+    $mbiemri = $_GET['mbiemri'];
+    $aksesi = $_GET['aksesi'];
 
+    if ($Modeli->updateUser($id, $emri, $mbiemri, $aksesi)) {
+        $_SESSION['aksesiUPerditesua'] = true;
+    } else {
+        $_SESSION['error'] = "Unable to update user.";
+    }
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit;
+}
 
-  $Modeli->setId($_GET['id']);
-  $Modeli->setEmri($_GET['emri']);
-  $Modeli->setMbiemri($_GET['mbiemri']);
-  $Modeli->setAksesi($_GET['aksesi']);
-
-
-
-
-  $_SESSION['aksesiUPerditesua'] = true;
+// Handle Delete Request
+if (isset($_GET['deleteUserID'])) {
+    if ($Modeli->fshijPerdoruesin($_GET['deleteUserID'])) {
+        $_SESSION['userDeleted'] = true;
+    } else {
+        $_SESSION['error'] = "Unable to delete user.";
+    }
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perdoruesit</title>
-  
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perdoruesit</title>
+</head>
 <body>
-
-  
-
-  <div class="containerDashboardP">
-    <?php
-    if (isset($_SESSION['aksesiUPerditesua'])) {
-      echo '
-                <div class="mesazhiSuksesStyle">
-                  <p>Llogaria u ndryshua!</p>
-                  <button id="mbyllMesazhin">
-                    X
-                  </button>
-                </div>
-          ';
-    }
-    ?>
-    <h1 class="adminPageH1">Lista e Perdoruesve</h1>
-    <table>
-      <tr>
-        <th class="adminPageTableHead">ID</th>
-        <th class="adminPageTableHead">Emri</th>
-        <th class="adminPageTableHead">Mbiemri</th>
-        <th class="adminPageTableHead">Aksesi</th>
-        <th class="adminPageTableHead">Funksione</th>
-      </tr>
-      <?php
-      $perdoruesit = $Modeli->shfaqTeGjithePerdoruesit();
-
-      foreach ($perdoruesit as $perdoruesi) {
-        echo '
-            <tr>
-              <td class="adminPagetable" id="id_' . $perdoruesi['id'] . '">' . $perdoruesi['id'] . '</td>
-              <td class="adminPagetable" ><input id="emri_' . $perdoruesi['id'] . '" type="text" placeholder="Emri" value="' . $perdoruesi['emri'] . '"></td>
-              <td class="adminPagetable" ><input id="mbiemri_' . $perdoruesi['id'] . '" type="text" placeholder=""value="' . $perdoruesi['mbiemri'] . '"></td>';
-        if ($perdoruesi['aksesi'] == 2 && $_SESSION['aksesi'] != 2 || $perdoruesi['id'] == $_SESSION['id']) {
-          echo '<td class="adminPagetable" id="aksesi_' . $perdoruesi['id'] . '">' . $perdoruesi['aksesi'] . '</td>';
-        } else {
-          echo '<td class="adminPagetable"><input id="aksesi_' . $perdoruesi['id'] . '" type="number" min="0" max="2" placeholder="Aksesi" value="' . $perdoruesi['aksesi'] . '"></td>';
+    <div class="containerDashboardP">
+        <?php
+        if (isset($_SESSION['aksesiUPerditesua'])) {
+            echo '<div class="mesazhiSuksesStyle"><p>Llogaria u ndryshua!</p></div>';
+            unset($_SESSION['aksesiUPerditesua']);
         }
-        echo '<td><button class="adminPageTableButton" onclick="return ndryshoTeDhenat(' . $perdoruesi['id'] . '); ">Edito</button>
-             
-            </tr>';
-      }
-      ?>
-    </table>
-  </div>
+        if (isset($_SESSION['userDeleted'])) {
+            echo '<div class="mesazhiSuksesStyle"><p>Përdoruesi u fshi me sukses!</p></div>';
+            unset($_SESSION['userDeleted']);
+        }
+        if (isset($_SESSION['error'])) {
+            echo '<div class="mesazhiErrorStyle"><p>' . $_SESSION['error'] . '</p></div>';
+            unset($_SESSION['error']);
+        }
+        ?>
+        <h1 class="adminPageH1">Lista e Perdoruesve</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Emri</th>
+                <th>Mbiemri</th>
+                <th>Aksesi</th>
+                <th>Funksione</th>
+            </tr>
+            <?php
+            $perdoruesit = $Modeli->shfaqTeGjithePerdoruesit();
+            foreach ($perdoruesit as $perdoruesi) {
+                echo "<tr>
+                    <td>{$perdoruesi['id']}</td>
+                    <td><input type='text' id='emri_{$perdoruesi['id']}' value='{$perdoruesi['emri']}'></td>
+                    <td><input type='text' id='mbiemri_{$perdoruesi['id']}' value='{$perdoruesi['mbiemri']}'></td>
+                    <td><input type='number' id='aksesi_{$perdoruesi['id']}' min='0' max='2' value='{$perdoruesi['aksesi']}'></td>
+                    <td>
+                        <button onclick=\"ndryshoTeDhenat('{$perdoruesi['id']}');\">Edito</button>
+                        <button onclick=\"fshijPerdoruesin('{$perdoruesi['id']}');\">Fshij</button>
+                    </td>
+                </tr>";
+            }
+            ?>
+        </table>
+    </div>
 
-  <a href="dashboard.php" class="goBack">Go Back to Dashboard</a>
+    <a href="dashboard.php">Go Back to Dashboard</a>
 
+    <script>
+        function ndryshoTeDhenat(idUser) {
+            var emri = encodeURIComponent(document.getElementById("emri_" + idUser).value);
+            var mbiemri = encodeURIComponent(document.getElementById("mbiemri_" + idUser).value);
+            var aksesi = encodeURIComponent(document.getElementById("aksesi_" + idUser).value);
+            if (emri === "" || mbiemri === "") {
+                alert("Emri dhe mbiemri nuk duhet të jenë të zbrazët!");
+            } else {
+                window.location.href = `?updateId=${idUser}&emri=${emri}&mbiemri=${mbiemri}&aksesi=${aksesi}`;
+            }
+        }
+
+        function fshijPerdoruesin(idUser) {
+            var confirmation = confirm("A jeni i sigurt që dëshironi të fshini këtë përdorues?");
+            if (confirmation) {
+                window.location.href = `?deleteUserID=${idUser}`;
+            }
+        }
+    </script>
 </body>
-
 </html>
-
-<script>
-  function ndryshoTeDhenat(idUser) {
-    const emREGEX = /^[A-Za-z]+$/
-    var userID = document.getElementById("userID_" + idUser).innerHTML;
-    var emri = document.getElementById("emri_" + idUser).value;
-    var mbiemri = document.getElementById("mbiemri_" + idUser).value;
-    var aksesi = document.getElementById("aksesi_" + idUser).value;
-
-    if (emri == "") {
-      alert("Emri nuk duhet te jet i zbrazet!");
-      emri.focus();
-      return false;
-    }
-
-    else if (mbiemri == "") {
-      alert("Mbiemri nuk duhet te jet i zbrazet!");
-      mbiemri.focus();
-      return false;
-    }
-    
-    else {
-      var link = "?userID=" + userID + "&emri=" + emri + "&mbiemri=" + mbiemri + "&aksesi=" + aksesi;
-      window.location.href = link;
-
-      return true;
-    }
-  }
-  function fshijKategorin(kategoriaID) {
-    var kategoriaID = document.getElementById("kategoriaID_" + kategoriaID).innerHTML;
-
-    var link = "?kategoriaID=" + kategoriaID + "&fshij";
-    window.location.href = link;
-  }
-</script>
-
-<?php
-unset($_SESSION['aksesiUPerditesua']);
-?>

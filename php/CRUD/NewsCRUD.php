@@ -196,31 +196,7 @@ Class NewsCRUD extends dbcon{
             return $e->getMessage();
         }
     }
-    public function shfaq4LajmetEFunditLAJME(){
-        try {
-            $sql = "SELECT * FROM (SELECT * FROM `lajmi` where kategorialajmit='lajme' ORDER BY `lajmiID` DESC LIMIT 4 ) AS lajmetEFundit ORDER BY lajmetEFundit.lajmiID DESC";
-            $stm = $this->dbcon->prepare($sql);
-            $stm->execute();
-
-            return $stm->fetchAll();
-        } catch (Exception $e) {
-            return $e->getMessage();
-        }
-    }
-    
-    
-    public function shfaq3LajmetEFunditCFAREBEJMNE(){
-      try {
-          $sql = "SELECT * FROM (SELECT * FROM `lajmi` where kategorialajmit='Cfarebejmne' ORDER BY `lajmiID` DESC LIMIT 3 ) AS lajmetEFundit ORDER BY lajmetEFundit.lajmiID DESC";
-          $stm = $this->dbcon->prepare($sql);
-          $stm->execute();
-
-          return $stm->fetchAll();
-      } catch (Exception $e) {
-          return $e->getMessage();
-      }
-  }
-  
+ 
 
 public function fshijLajminSipasID(){
         try {

@@ -17,7 +17,6 @@ class kategoriaCRUD extends dbcon
         $this->kategoriaID = $kategoriaID;
         $this->emriKategoris = $emriKategoris;
         $this->pershkrimiKategoris = $pershkrimiKategoris;
-
         $this->dbcon = $this->connDB();
     }
 
@@ -75,18 +74,6 @@ class kategoriaCRUD extends dbcon
             $stm = $this->dbcon->prepare($sql);
             $stm->execute([$this->emriKategoris, $this->pershkrimiKategoris, $this->kategoriaID]);
 
-        } catch (Exception $e) {
-            return $e->getMessage();
-        }
-    }
-    public function shfaqKategorinSipasID()
-    {
-        try {
-            $sql = "SELECT * FROM kategorialajmit where kategoriaID = ?";
-            $stm = $this->dbcon->prepare($sql);
-            $stm->execute([$this->kategoriaID]);
-
-            return $stm->fetch();
         } catch (Exception $e) {
             return $e->getMessage();
         }

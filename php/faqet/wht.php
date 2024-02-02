@@ -46,7 +46,6 @@
                 else{
                     i=0;
                 }
-                setTimeout("changeImg()", 3000);
             }
             document.addEventListener(onload, changeImg());
         </script>

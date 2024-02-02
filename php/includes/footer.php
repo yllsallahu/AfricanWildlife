@@ -35,4 +35,30 @@ footer{
   background-color: #333333;
   
 }
+
+@media screen and (max-width: 768px) {
+    .container.footers {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container.footers > div {
+        margin-bottom: 20px;
+    }
+
+    .container.footers iframe {
+        width: 90%; 
+        height: 250px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .fotterlinks {
+        font-size: 18px; 
+    }
+
+    .container.footers iframe {
+        height: 200px;
+    }
+}
  </style>
